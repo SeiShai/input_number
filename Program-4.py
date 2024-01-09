@@ -5,7 +5,7 @@
 # - Send the demo directly to my messenger
 # - Deadline before Jan 13, 2024
 
-#import modules
+# import modules
 import customtkinter
 import customtkinter as ctk
 from tkinter import *
@@ -15,6 +15,7 @@ from PIL import Image
 
 # def
 def confirm():
+
     bid1 = bid_entry1.get()
     bid2 = bid_entry2.get()
     bid3 = bid_entry3.get()
@@ -66,10 +67,16 @@ def confirm():
 
         CTkLabel(results_frame, text="", image=results_background).pack(expand=True)
 
-        CTkLabel(results_frame, text=f"for being the biggest bidder with:\n\n"
-        f"{largest}", font=("Oswald", 16)).place(relx=0.5, rely=0.5, anchor='center')
+        formatted_largest = "{:,}".format(largest)
+        results_label = CTkLabel(results_frame, text=f"For being the highest bidder with:\n\n"
+                                                     f"$ {formatted_largest}",
+                                 fg_color='transparent',
+                                 bg_color='transparent',
+                                 font=("Lucida fax", 30))
+        results_label.place(relx=0.5, rely=0.6, anchor='center')
 
         results_window.mainloop()
+
 
 # create window
 input_window = ctk.CTk()
