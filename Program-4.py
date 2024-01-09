@@ -41,9 +41,60 @@ window_frame.pack()
 CTkLabel(window_frame, text="", image=auction_background).pack(expand=True, side="right")
 CTkLabel(window_frame, text="", image=input_background).pack(expand=True, side="left")
 
-
+# titles
 
 # entries
+bid_entry1 = CTkEntry(window_frame,
+                      width=280,
+                      height=35,
+                      border_width=1,
+                      corner_radius=10,
+                      fg_color='#e6e0c8',
+                      bg_color='#4A4545',
+                      text_color='#000000',
+                      placeholder_text='Bidding price 1',
+                      placeholder_text_color='#000000',
+                      justify=CENTER,
+                      font=("times new roman", 20))
+bid_entry1.place(relx=0.25, rely=0.35, anchor='center')
+
+bid_entry2 = CTkEntry(window_frame,
+                      width=280,
+                      height=35,
+                      border_width=1,
+                      corner_radius=10,
+                      fg_color='#e6e0c8',
+                      bg_color='#42403D',
+                      text_color='#000000',
+                      placeholder_text='Bidding price 2',
+                      placeholder_text_color='#000000',
+                      justify=CENTER,
+                      font=("times new roman", 20))
+bid_entry2.place(relx=0.25, rely=0.48, anchor='center')
+
+bid_entry3 = CTkEntry(window_frame,
+                      width=280,
+                      height=35,
+                      border_width=1,
+                      corner_radius=10,
+                      fg_color='#e6e0c8',
+                      bg_color='#3D3D39',
+                      text_color='#000000',
+                      placeholder_text='Bidding price 3',
+                      placeholder_text_color='#000000',
+                      justify=CENTER, font=("times new roman", 20))
+bid_entry3.place(relx=0.25, rely=0.61, anchor='center')
+
+# buttons
+Confirm_button = CTkButton(window_frame,
+                         text="Confirm",
+                         fg_color="#1e8881",
+                         hover_color="#E44982",
+                         font=("Arial Bold", 12),
+                         text_color="#ffffff",
+                         width=280,
+                         height=35)
+Confirm_button.place(relx=0.25, rely=0.80, anchor='center')
 
 
 
